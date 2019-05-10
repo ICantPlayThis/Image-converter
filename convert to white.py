@@ -8,19 +8,23 @@ import os
 import shutil
 
 # initialise variables
-pixels = 16
+pixels = 16, 16
 folder = "./textures/"
 extension = "*.png"
 files = []
+white = Image.open("./white 16x16.png")
 
-def convert_image():
-    return
+def convert_image(image):
+    global folder
+    global extension
+   #img = Image.open(file)
+
 
 
 # find images
 for dir,_,_ in os.walk(folder):
     files.extend(glob.glob(os.path.join(dir, extension)))
 
-for file in files:
-    print(file)
-#im = Image.open()
+#for file in files:
+    #convert_image(file)
+

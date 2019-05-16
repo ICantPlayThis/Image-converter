@@ -1,5 +1,5 @@
 # ICantPlayThis / Weeb Trash
-# Python 3.6
+# Python 3.7
 # V1.0: Program to crop image into 5x5 squares each with a height and length of 100px - 30/03/2018
 # V1.1: removed unused code
 # V2.0: lists all images in folder that can be selected - 31/03/2018
@@ -39,6 +39,8 @@ def crop_line(line, squares, name, square_length):  # crop the image
 images = glob.glob('./images/*.png') + glob.glob('./images/*.jpg')
 for line in images:
     files.append(line[9:])
+    print(line)
+    print(line[9:])
 
 # display each line in list
 for i, file in enumerate(files):

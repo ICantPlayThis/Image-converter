@@ -17,7 +17,7 @@ images = []
 blacklist = ['font', 'gui', 'effect', 'misc']
 
 def convert_image(image):
-    if image.size[0] == image.size[1]: # if the 
+    if image.size[0] == image.size[1]: # if the width equals the heigth
         alpha = image.split()[-1] # split image into alpha only
         white = Image.new(image.mode, image.size, (255, 255, 255, 0)) # make a pure white image
         white.putalpha(alpha) # put the alpha from the image into the blank white image
@@ -35,7 +35,7 @@ for image in images:
     files.append(image[(len(folder)):])
 
 # remove blacklisted images
-for i in files[:]:
+for i in files[:]: # : in square bracket makes a copy of the list
     for image in blacklist:
         if image in i:
             files.remove(i)
